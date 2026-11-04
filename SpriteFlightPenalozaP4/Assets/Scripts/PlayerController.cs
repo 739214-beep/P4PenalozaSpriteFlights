@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject boosterFlame;
+    private float esapsedTime = 0f;
+    public float maxSpeed = 5f;
     public float thrustForce = 1f;
     Rigidbody2D rb;
     void OnCollisionEnter2D(Collision2D collision)
@@ -19,14 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            boosterFlame.SetActive(true);
-        }
-        else if (Mouse.current.leftButton.wasReleasedThisFrame)
-        {
-            boosterFlame.SetActive(false);
-        }
+      
         if (Mouse.current.leftButton.isPressed)
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
@@ -36,6 +30,11 @@ public class PlayerController : MonoBehaviour
             transform.up = direction;
 
             rb.AddForce(direction * thrustForce);
+          
+            if (rb.linearVelocity.magnitude > maxSpeed)
+            {
+                rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+            }
         }
     }
 }

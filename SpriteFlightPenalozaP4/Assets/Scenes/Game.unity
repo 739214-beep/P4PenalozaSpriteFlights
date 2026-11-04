@@ -1780,7 +1780,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1350982430}
   - component: {fileID: 1350982431}
-  - component: {fileID: 1350982432}
   m_Layer: 0
   m_Name: BoosterFlame
   m_TagString: Untagged
@@ -1797,7 +1796,7 @@ Transform:
   m_GameObject: {fileID: 1350982429}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.000089150846}
-  m_LocalPosition: {x: 0.014, y: -1.154, z: 0}
+  m_LocalPosition: {x: 0.006, y: -1.146, z: 0}
   m_LocalScale: {x: 0.6604, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1862,20 +1861,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1350982432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350982429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8dc8d43ff8520043b62e13344b3f82f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  boosterFlame: {fileID: 0}
-  thrustForce: 1
 --- !u!1001 &1365289588
 PrefabInstance:
   m_ObjectHideFlags: 0
