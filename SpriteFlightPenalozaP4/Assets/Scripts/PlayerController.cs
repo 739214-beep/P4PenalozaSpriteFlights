@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    private float esapsedTime = 0f;
+    public UIDocument uiDocument;
+    private float score = 0f;
+    public float scoreMultiplier = 10f;
+    private float elapsedTime = 0f;
     public float maxSpeed = 5f;
     public float thrustForce = 1f;
     Rigidbody2D rb;
@@ -20,7 +24,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        elapsedTime += Time.deltaTime;
+        //score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+        Debug.Log("Score: " + score);
+
         if (Mouse.current.leftButton.isPressed)
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
