@@ -1818,10 +1818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8dc8d43ff8520043b62e13344b3f82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  uiDocument: {fileID: 0}
   scoreMultiplier: 10
-  maxSpeed: 5
   thrustForce: 1
+  uiDocument: {fileID: 1037311004}
+  explosionEffect: {fileID: 4423109864744026543, guid: 0d309d49456e2884d8c9d008842ad3fa, type: 3}
 --- !u!4 &1231939953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4318221511020705474, guid: ad5a693253ead5d4eb5d213b0dedb6b2, type: 3}
@@ -2673,6 +2673,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1154272200}
   - {fileID: 1990616751}
-  - {fileID: 820409825}
   - {fileID: 1180332133}
   - {fileID: 1037311005}
+  - {fileID: 820409825}
